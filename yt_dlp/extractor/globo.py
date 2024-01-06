@@ -109,7 +109,7 @@ class GloboIE(InfoExtractor):
 
         self._request_webpage(HEADRequest(security['sources'][0]['url_template']), video_id, 'Getting locksession cookie')
 
-        security_hash = security['sources'][0]['token']
+        security_hash = security['sources'][1]['token']
         if not security_hash:
             message = security.get('message')
             if message:
